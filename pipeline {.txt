@@ -1,0 +1,10 @@
+pipeline {
+    agent { label 'server-1' }
+    stages {
+        stage('Pull Code From GitHub') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Bala621/game.git'
+            }
+        }
+    }
+}
